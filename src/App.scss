@@ -1,0 +1,32 @@
+.App{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: 6rem 1fr;
+  grid-template-columns: 15rem 1fr;
+  grid-template-areas: 
+    'header header'
+    'dashboard dashboard';
+  &.side{
+    grid-template-areas: 
+    'header header'
+    'side dashboard';
+  }
+  &.collapse-header{
+    grid-template-rows: 2rem 1fr;
+  }
+}
+.Header-container{
+  grid-area: header
+}
+.Side-container{
+  grid-area: side
+}
+.Board-container{
+  grid-area: dashboard
+}
